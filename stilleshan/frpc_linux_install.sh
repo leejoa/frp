@@ -100,6 +100,11 @@ serverPort = 37000
 auth.method = "token"
 auth.token = "12345678"
 
+webServer.addr = "127.0.0.1"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "admin"
+
 
 [[proxies]]
 name = "vnc"

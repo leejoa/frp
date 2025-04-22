@@ -1,7 +1,13 @@
-serverAddr = "frp.freefrp.net"
-serverPort = 7000
+#user = ${RADOM_NAME}
+serverAddr = "con.dlxp.cn"
+serverPort = 37000
 auth.method = "token"
-auth.token = "freefrp.net"
+auth.token = "12345678"
+
+webServer.addr = "127.0.0.1"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "admin"
 
 [[proxies]]
 name = "web1_xxxxx"
