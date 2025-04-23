@@ -92,7 +92,17 @@ mkdir -p ${FRP_PATH}
 mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 
 # configure frpc.toml
-RADOM_NAME=$(cat /dev/urandom | head -n 10 | md5sum | head -c 8)
+# 提示用户组名
+read -p "请输入用户名称， 若直接回车将使用随机名称: " RADOM_NAME
+
+# 验证输入非空
+if [ -z "$RADOM_NAME" ]; then
+    echo "你选择使用随机名称！"
+    RADOM_NAME=$(cat /dev/urandom | head -n 10 | md5sum | head -c 8)
+    # exit 1
+fi
+echo "你选择的用户名称是：" ${RADOM_NAME}
+
 cat >${FRP_PATH}/${FRP_NAME}.toml<<EOF
 user = "${RADOM_NAME}"
 serverAddr = "con.dlxp.cn"
