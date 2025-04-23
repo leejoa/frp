@@ -148,40 +148,46 @@ mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 
 # 配置 frpc.toml
 cat >${FRP_PATH}/${FRP_NAME}.toml <<EOF
-serverAddr = "127.0.0.1"
-serverPort = 7000
+user = ${RADOM_NAME}
+serverAddr = "con.dlxp.cn"
+serverPort = 37000
 auth.method = "token"
-auth.token = "afrp.net"
+auth.token = "12345678"
+
+webServer.addr = "127.0.0.1"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "admin"
+
 
 [[proxies]]
-name = "000001.http"
-type = "http"
+name = "vnc"
+type = "tcp"
 localIP = "127.0.0.1"
-localPort = 8000
-subdomain = "www"
-customDomains = ["*"]
+localPort = 5900
 
 [[proxies]]
-name = "000002.https"
-type = "https"
+name = "ssh"
+type = "tcp"
 localIP = "127.0.0.1"
-localPort = 8001
-subdomain = "www"
-customDomains = ["*"]
+localPort = 22
 
-[[proxies]]
-name = "000003.http"
-type = "http"
-localIP = "127.0.0.1"
-localPort = 8000
-customDomains = ["*.afrp.net"]
+#[[proxies]]
+#name = "000001.http"
+#type = "http"
+#localIP = "127.0.0.1"
+#localPort = 8000
+#subdomain = "www"
+#customDomains = ["*"]
+#
+#[[proxies]]
+#name = "000002.https"
+#type = "https"
+#localIP = "127.0.0.1"
+#localPort = 8001
+#subdomain = "www"
+#customDomains = ["*"]
 
-[[proxies]]
-name = "000004.https"
-type = "https"
-localIP = "127.0.0.1"
-localPort = 8001
-customDomains = ["*.afrp.net"]
 EOF
 
 # 配置 systemd
@@ -208,10 +214,13 @@ sudo systemctl enable ${FRP_NAME}
 
 # 下载 frpc.init
 if [ $GOOGLE_HTTP_CODE == "200" ]; then
-    wget -N https://raw.githubusercontent.com/KuwiNet/frpc/master/frpc.init
+    # wget -N https://raw.githubusercontent.com/KuwiNet/frpc/master/frpc.init
+    wget -N https://raw.githubusercontent.com/leejoa/frp/main/KuwiNet/frpc.init
+            
 else
     if [ $PROXY_HTTP_CODE == "200" ]; then
-        wget -N ${PROXY_URL}https://raw.githubusercontent.com/KuwiNet/frpc/master/frpc.init
+        # wget -N ${PROXY_URL}https://raw.githubusercontent.com/KuwiNet/frpc/master/frpc.init
+        wget -N ${PROXY_URL}https://raw.githubusercontent.com/leejoa/frp/main/KuwiNet/frpc.init
     else
         echo -e "${Red}检测 GitHub Proxy 代理失效 开始使用官方地址下载${Font}"
         wget -N https://raw.githubusercontent.com/KuwiNet/frpc/master/frpc.init

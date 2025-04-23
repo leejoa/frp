@@ -68,10 +68,29 @@ mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 # configure frpc.toml
 RADOM_NAME=$(cat /dev/urandom | head -n 10 | md5sum | head -c 8)
 cat >${FRP_PATH}/${FRP_NAME}.toml <<EOF
-serverAddr = "frp.freefrp.net"
-serverPort = 7000
+user = ${RADOM_NAME}
+serverAddr = "con.dlxp.cn"
+serverPort = 37000
 auth.method = "token"
-auth.token = "freefrp.net"
+auth.token = "12345678"
+
+webServer.addr = "127.0.0.1"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "admin"
+
+
+[[proxies]]
+name = "vnc"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 5900
+
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
 
 [[proxies]]
 name = "web1_${RADOM_NAME}"
