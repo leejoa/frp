@@ -68,17 +68,22 @@ mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 # configure frpc.toml
 RADOM_NAME=$(cat /dev/urandom | head -n 10 | md5sum | head -c 8)
 cat >${FRP_PATH}/${FRP_NAME}.toml <<EOF
-user = ${RADOM_NAME}
+user = "${RADOM_NAME}"
 serverAddr = "con.dlxp.cn"
 serverPort = 37000
 auth.method = "token"
 auth.token = "12345678"
 
 webServer.addr = "127.0.0.1"
-webServer.port = 7400
+webServer.port = 37400
 webServer.user = "admin"
 webServer.password = "admin"
 
+[[proxies]]
+name = "manage"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 37400
 
 [[proxies]]
 name = "vnc"
@@ -92,26 +97,26 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 22
 
-[[proxies]]
-name = "web1_${RADOM_NAME}"
-type = "http"
-localIP = "192.168.1.2"
-localPort = 5000
-customDomains = ["nas.yourdomain.com"]
-
-[[proxies]]
-name = "web2_${RADOM_NAME}"
-type = "https"
-localIP = "192.168.1.2"
-localPort = 5001
-customDomains = ["nas.yourdomain.com"]
-
-[[proxies]]
-name = "tcp1_${RADOM_NAME}"
-type = "tcp"
-localIP = "192.168.1.3"
-localPort = 22
-remotePort = 22222
+#[[proxies]]
+#name = "web1_${RADOM_NAME}"
+#type = "http"
+#localIP = "192.168.1.2"
+#localPort = 5000
+#customDomains = ["nas.yourdomain.com"]
+#
+#[[proxies]]
+#name = "web2_${RADOM_NAME}"
+#type = "https"
+#localIP = "192.168.1.2"
+#localPort = 5001
+#customDomains = ["nas.yourdomain.com"]
+#
+#[[proxies]]
+#name = "tcp1_${RADOM_NAME}"
+#type = "tcp"
+#localIP = "192.168.1.3"
+#localPort = 22
+#remotePort = 22222
 
 EOF
 
