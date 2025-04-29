@@ -133,6 +133,27 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 22
 
+#[[proxies]]
+#name = "web1_${RADOM_NAME}"
+#type = "http"
+#localIP = "192.168.1.2"
+#localPort = 5000
+#customDomains = ["nas.yourdomain.com"]
+#
+#[[proxies]]
+#name = "web2_${RADOM_NAME}"
+#type = "https"
+#localIP = "192.168.1.2"
+#localPort = 5001
+#customDomains = ["nas.yourdomain.com"]
+#
+#[[proxies]]
+#name = "tcp1_${RADOM_NAME}"
+#type = "tcp"
+#localIP = "192.168.1.3"
+#localPort = 22
+#remotePort = 22222
+
 EOF
 
 # configure systemd
