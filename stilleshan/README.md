@@ -1,7 +1,8 @@
 # 关于frpc
 ## 项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透客户端 frpc 的一键安装卸载脚本和 docker 镜像.支持群晖NAS,Linux 服务器和 docker 等多种环境安装部署.
-感谢stilleshan大佬的脚本。
+
+- 感谢[stilleshan](https://github.com/stilleshan/frpc)大佬的脚本。
 - GitHub [stilleshan/frpc](https://github.com/stilleshan/frpc)
 - Docker [stilleshan/frpc](https://hub.docker.com/r/stilleshan/frpc)
 > *docker image support for X86 and ARM*
@@ -80,6 +81,7 @@ docker restart frpc
 ## 项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本和 docker 镜像.支持 Linux 服务器和 docker 等多种环境安装部署.
 
+- 感谢[stilleshan](https://github.com/stilleshan/frpc)大佬的脚本。
 - GitHub [stilleshan/frps](https://github.com/stilleshan/frps)
 - Docker [stilleshan/frps](https://hub.docker.com/r/stilleshan/frps)
 > *docker image support for X86 and ARM*
