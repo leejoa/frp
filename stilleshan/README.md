@@ -27,9 +27,9 @@
 
 安装
 ```shell
-wget https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
+wget [https://raw.githubusercontent.com/leejoa/frp/stilleshan/master/frpc_linux_install.sh](https://raw.githubusercontent.com/leejoa/frp/refs/heads/main/stilleshan/frpc_linux_install.sh) && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 # 以下为国内镜像
-wget https://ghfast.top/https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
+wget https://ghfast.top[/https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_install.sh](https://raw.githubusercontent.com/leejoa/frp/refs/heads/main/stilleshan/frpc_linux_install.sh) && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 ```
 
 使用
