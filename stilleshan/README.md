@@ -27,9 +27,9 @@
 
 安装
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
+wget https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 # 以下为国内镜像
-wget https://ghfast.top/https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
+wget https://ghfast.top/https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 ```
 
 使用
@@ -42,9 +42,9 @@ sudo systemctl restart frpc
 
 卸载
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
+wget https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
 # 以下为国内镜像
-wget https://ghfast.top/https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
+wget https://ghfast.top/https://raw.githubusercontent.com/leejoa/stilleshan/frp/master/frpc_linux_uninstall.sh && chmod +x frpc_linux_uninstall.sh && ./frpc_linux_uninstall.sh
 ```
 
 ### 4. Linux 服务器 docker 安装
@@ -54,7 +54,7 @@ wget https://ghfast.top/https://raw.githubusercontent.com/stilleshan/frpc/master
 ```shell
 git clone https://github.com/stilleshan/frpc
 # git clone 本仓库镜像
-git clone https://ghfast.top/https://github.com/stilleshan/frpc
+git clone https://ghfast.top/https://github.com/leejoa/stilleshan/frp
 # 国内镜像
 vi /root/frpc/frpc.toml
 # 配置 frpc.toml 文件
