@@ -25,3 +25,4 @@ RUN if [ "$(uname -m)" = "x86_64" ]; then export PLATFORM=amd64 ; \
 VOLUME /frp
 
 CMD /frp/frpc -c /frp/frpc.toml
+
