@@ -1,5 +1,7 @@
-# 关于frpc
-## 项目简介
+# 关于项目
+本项目主要用于自行架设自用frp内网穿透客户諯，代码主要fork于[stilleshan](https://github.com/stilleshan/frpc)，并一并致谢[fatedier/frp](https://github.com/fatedier/frp)
+    
+## 关于frpc项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透客户端 frpc 的一键安装卸载脚本和 docker 镜像.支持群晖NAS,Linux 服务器和 docker 等多种环境安装部署.
 
 - 感谢[stilleshan](https://github.com/stilleshan/frpc)大佬的脚本。
@@ -77,8 +79,8 @@ docker restart frpc
 
 
 
-# 关于frps
-## 项目简介
+
+## 关于frps项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本和 docker 镜像.支持 Linux 服务器和 docker 等多种环境安装部署.
 
 - 感谢[stilleshan](https://github.com/stilleshan/frpc)大佬的脚本。
