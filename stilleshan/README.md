@@ -1,17 +1,10 @@
 # frpc
 ## 项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透客户端 frpc 的一键安装卸载脚本和 docker 镜像.支持群晖NAS,Linux 服务器和 docker 等多种环境安装部署.
-
+感谢stilleshan大佬的脚本。
 - GitHub [stilleshan/frpc](https://github.com/stilleshan/frpc)
 - Docker [stilleshan/frpc](https://hub.docker.com/r/stilleshan/frpc)
 > *docker image support for X86 and ARM*
-
-## 更新
-- **2024-03-03** 更新到新版本,支持 toml 配置文件.
-- **2021-05-31** 更新国内镜像方便使用
-- **2021-05-31** 目前 X86 群晖 DMS 7.0 可直接使用 Linux 版本脚本,已实测.由于没有 ARM 版可尝试,请自行尝试.
-- **2021-05-31** 更新 Linux 一键安装脚本同时支持 X86 和 ARM
-- **2021-05-29** 更新从`0.36.2`版本起 docker 镜像同时支持 X86 和 ARM
 
 ## 使用
 以下分为四种部署方法,请根据实际情况自行选择:
